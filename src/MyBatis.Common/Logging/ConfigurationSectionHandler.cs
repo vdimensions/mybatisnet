@@ -5,7 +5,7 @@
  * $Revision: 474141 $
  * $Date: 2008-06-28 09:26:16 -0600 (Sat, 28 Jun 2008) $
  * 
- * iBATIS.NET Data Mapper
+ * MyBatis.NET Data Mapper
  * Copyright (C) 2008/2005 - The Apache Software Foundation
  *  
  * 
@@ -43,11 +43,11 @@ namespace MyBatis.Common.Logging
 	/// <code lang="XML" escaped="true">
 	/// <configuration>
 	///		<configSections>
-	///			<sectionGroup name="iBATIS">
+	///			<sectionGroup name="MyBatis">
 	///				<section name="logging" type="MyBatis.Common.Logging.ConfigurationSectionHandler, MyBatis.Common" />
 	///			</sectionGroup>	
 	///		</configSections>
-	///		<iBATIS>
+	///		<MyBatis>
 	///			<logging>
 	///				<logFactoryAdapter type="MyBatis.Common.Logging.Impl.ConsoleOutLoggerFA, MyBatis.Common">
 	///					<arg key="showLogName" value="true" />
@@ -56,7 +56,7 @@ namespace MyBatis.Common.Logging
 	///					<arg key="dateTimeFormat" value="yyyy/MM/dd HH:mm:ss:SSS" />
 	///				</logFactoryAdapter>
 	///			</logging>
-	///		</iBATIS>
+	///		</MyBatis>
 	/// </configuration>
 	/// </code> 
 	/// </example>
@@ -64,9 +64,9 @@ namespace MyBatis.Common.Logging
 	/// The following aliases are recognized for the type attribute of logFactoryAdapter: 
 	/// </para>
 	/// <list type="table">
-	/// <item><term>CONSOLE</term><description>Alias for Apache.Ibatis.Common.Logging.Impl.ConsoleOutLoggerFA, MyBatis.Common</description></item>
-	/// <item><term>TRACE</term><description>Alias for Apache.Ibatis.Common.Logging.Impl.TraceLoggerFA, MyBatis.Common</description></item>
-	/// <item><term>NOOP</term><description>Alias Apache.Ibatis.Common.Logging.Impl.NoOpLoggerFA, MyBatis.Common</description></item>
+	/// <item><term>CONSOLE</term><description>Alias for MyBatis.Common.Logging.Impl.ConsoleOutLoggerFA, MyBatis.Common</description></item>
+	/// <item><term>TRACE</term><description>Alias for MyBatis.Common.Logging.Impl.TraceLoggerFA, MyBatis.Common</description></item>
+	/// <item><term>NOOP</term><description>Alias MyBatis.Common.Logging.Impl.NoOpLoggerFA, MyBatis.Common</description></item>
 	/// </list>
 	/// </remarks>
 	public class ConfigurationSectionHandler: IConfigurationSectionHandler

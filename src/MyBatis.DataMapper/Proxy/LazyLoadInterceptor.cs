@@ -5,7 +5,7 @@
  * $LastChangedDate: 2008-06-28 09:26:16 -0600 (Sat, 28 Jun 2008) $
  * $LastChangedBy: gbayon $
  * 
- * iBATIS.NET Data Mapper
+ * MyBatis.NET Data Mapper
  * Copyright (C) 2008/2005 - The Apache Software Foundation
  *  
  * 
@@ -30,7 +30,7 @@ using System;
 using System.Collections;
 using System.Reflection;
 using MyBatis.DataMapper.MappedStatements;
-using Castle.Core.Interceptor;
+using Castle.DynamicProxy;
 using MyBatis.Common.Logging;
 using MyBatis.Common.Utilities.Objects.Members;
 

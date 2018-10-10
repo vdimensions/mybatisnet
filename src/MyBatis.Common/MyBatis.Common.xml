@@ -1962,7 +1962,7 @@
             The <see cref="T:System.Runtime.Serialization.StreamingContext"/> that contains contextual information about the source or destination. 
             </param>
         </member>
-        <member name="T:MyBatis.Common.Exceptions.IbatisException">
+        <member name="T:MyBatis.Common.Exceptions.MyBatisException">
             <summary>
             The DalException is thrown when an error in the Dal occurs.
             </summary>
@@ -1970,18 +1970,18 @@
             This is the base exception for all exceptions thrown in the framework. 
             </remarks>
         </member>
-        <member name="M:MyBatis.Common.Exceptions.IbatisException.#ctor">
+        <member name="M:MyBatis.Common.Exceptions.MyBatisException.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:MyBatis.Common.Exceptions.IbatisException"/> class.
+            Initializes a new instance of the <see cref="T:MyBatis.Common.Exceptions.MyBatisException"/> class.
             </summary>
             <remarks>
             This constructor initializes the <para>Message</para> property of the new instance 
             to a system-supplied message that describes the error.
             </remarks>
         </member>
-        <member name="M:MyBatis.Common.Exceptions.IbatisException.#ctor(System.Exception)">
+        <member name="M:MyBatis.Common.Exceptions.MyBatisException.#ctor(System.Exception)">
             <summary>
-            Initializes a new instance of the <see cref="T:MyBatis.Common.Exceptions.IbatisException"/> 
+            Initializes a new instance of the <see cref="T:MyBatis.Common.Exceptions.MyBatisException"/> 
             class with a reference to the inner exception that is the cause of this exception.
             </summary>
             <remarks>
@@ -1994,9 +1994,9 @@
             the current exception is raised in a catch block that handles the inner exception.
             </param>
         </member>
-        <member name="M:MyBatis.Common.Exceptions.IbatisException.#ctor(System.String)">
+        <member name="M:MyBatis.Common.Exceptions.MyBatisException.#ctor(System.String)">
             <summary>
-            Initializes a new instance of the <see cref="T:MyBatis.Common.Exceptions.IbatisException"/> 
+            Initializes a new instance of the <see cref="T:MyBatis.Common.Exceptions.MyBatisException"/> 
             class with a specified error message.
             </summary>
             <remarks>
@@ -2005,9 +2005,9 @@
             </remarks>
             <param name="message">The message that describes the error.</param>
         </member>
-        <member name="M:MyBatis.Common.Exceptions.IbatisException.#ctor(System.String,System.Exception)">
+        <member name="M:MyBatis.Common.Exceptions.MyBatisException.#ctor(System.String,System.Exception)">
             <summary>
-            Initializes a new instance of the <see cref="T:MyBatis.Common.Exceptions.IbatisException"/> 
+            Initializes a new instance of the <see cref="T:MyBatis.Common.Exceptions.MyBatisException"/> 
             class with a specified error message and a reference to the inner exception 
             that is the cause of this exception.
             </summary>
@@ -2020,9 +2020,9 @@
             <param name="message">The message that describes the error.</param>
             <param name="inner">The exception that caused the error</param>
         </member>
-        <member name="M:MyBatis.Common.Exceptions.IbatisException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+        <member name="M:MyBatis.Common.Exceptions.MyBatisException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
             <summary>
-            Initializes a new instance of the <see cref="T:MyBatis.Common.Exceptions.IbatisException"/> 
+            Initializes a new instance of the <see cref="T:MyBatis.Common.Exceptions.MyBatisException"/> 
             class with serialized data.
             </summary>
             <remarks>
@@ -2185,11 +2185,11 @@
             <code lang="XML" escaped="true">
             <configuration>
             	<configSections>
-            		<sectionGroup name="iBATIS">
+            		<sectionGroup name="MyBatis">
             			<section name="logging" type="MyBatis.Common.Logging.ConfigurationSectionHandler, MyBatis.Common" />
             		</sectionGroup>	
             	</configSections>
-            	<iBATIS>
+            	<MyBatis>
             		<logging>
             			<logFactoryAdapter type="MyBatis.Common.Logging.Impl.ConsoleOutLoggerFA, MyBatis.Common">
             				<arg key="showLogName" value="true" />
@@ -2198,7 +2198,7 @@
             				<arg key="dateTimeFormat" value="yyyy/MM/dd HH:mm:ss:SSS" />
             			</logFactoryAdapter>
             		</logging>
-            	</iBATIS>
+            	</MyBatis>
             </configuration>
             </code> 
             </example>
@@ -2206,9 +2206,9 @@
             The following aliases are recognized for the type attribute of logFactoryAdapter: 
             </para>
             <list type="table">
-            <item><term>CONSOLE</term><description>Alias for Apache.Ibatis.Common.Logging.Impl.ConsoleOutLoggerFA, MyBatis.Common</description></item>
-            <item><term>TRACE</term><description>Alias for Apache.Ibatis.Common.Logging.Impl.TraceLoggerFA, MyBatis.Common</description></item>
-            <item><term>NOOP</term><description>Alias Apache.Ibatis.Common.Logging.Impl.NoOpLoggerFA, MyBatis.Common</description></item>
+            <item><term>CONSOLE</term><description>Alias for MyBatis.Common.Logging.Impl.ConsoleOutLoggerFA, MyBatis.Common</description></item>
+            <item><term>TRACE</term><description>Alias for MyBatis.Common.Logging.Impl.TraceLoggerFA, MyBatis.Common</description></item>
+            <item><term>NOOP</term><description>Alias MyBatis.Common.Logging.Impl.NoOpLoggerFA, MyBatis.Common</description></item>
             </list>
             </remarks>
         </member>
@@ -2370,7 +2370,7 @@
             a <see cref="T:System.Collections.Specialized.NameValueCollection" /> which will contain zero or more user supplied configuration
             properties.
             <para>
-            The Apache.Ibatis.Common assembly ships with the following built-in <see cref="T:MyBatis.Common.Logging.ILoggerFactoryAdapter" /> implementations:
+            The MyBatis.Common assembly ships with the following built-in <see cref="T:MyBatis.Common.Logging.ILoggerFactoryAdapter" /> implementations:
             </para>
             <list type="table">
             <item><term><see cref="T:MyBatis.Common.Logging.Impl.ConsoleOutLoggerFA" /></term><description>Writes output to Console.Out</description></item>
@@ -2878,7 +2878,7 @@
             </summary>
             <remarks>
             <para>
-            The Apache.Ibatis.Common assembly ships with the following built-in <see cref="T:MyBatis.Common.Logging.ILoggerFactoryAdapter" /> implementations:
+            The MyBatis.Common assembly ships with the following built-in <see cref="T:MyBatis.Common.Logging.ILoggerFactoryAdapter" /> implementations:
             </para>
             <list type="table">
             <item><term><see cref="T:MyBatis.Common.Logging.Impl.ConsoleOutLoggerFA" /></term><description>Writes output to Console.Out</description></item>
@@ -3191,11 +3191,11 @@
             </p>
             </remarks>
             <example>
-            iBATIS V1 
-            "Apache.Ibatis.Common.Test.properties.xml, MyBatis.Common.Test"
+            MyBatis V1 
+            "MyBatis.Common.Test.properties.xml, MyBatis.Common.Test"
             
-            iBATIS V2
-            assembly://Apache.Ibatis.Common.Test/Apache.Ibatis.Common.Test/properties.xml
+            MyBatis V2
+            assembly://MyBatis.Common.Test/MyBatis.Common.Test/properties.xml
             
             "CompanyName.ProductName.Maps.ISCard.xml, OctopusService"
             assembly://OctopusService/CompanyName.ProductName.Maps/ISCard.xml
@@ -3404,7 +3404,7 @@
         </member>
         <member name="T:MyBatis.Common.Resources.IResource">
             <summary>
-            The central abstraction for iBATIS.NET's access to resources.
+            The central abstraction for MyBatis.NET's access to resources.
             </summary>
         </member>
         <member name="P:MyBatis.Common.Resources.IResource.Uri">
@@ -3490,7 +3490,7 @@
         </member>
         <member name="T:MyBatis.Common.Resources.IResourceLoader">
             <summary>
-            Return an <see cref="!:Apache.Ibatis.Common.Utilities.Resources.IResource"/> handle for the
+            Return an <see cref="T:MyBatis.Common.Resources.IResource"/> handle for the
             specified resource.
             </summary>
         </member>
@@ -3503,12 +3503,12 @@
         </member>
         <member name="M:MyBatis.Common.Resources.IResourceLoader.Create(System.Uri)">
             <summary>
-            Return an <see cref="!:Apache.Ibatis.Common.Utilities.Resources.IResource"/> handle for the
+            Return an <see cref="T:MyBatis.Common.Resources.IResource"/> handle for the
             specified URI.
             </summary>
             <param name="uri">The URI.</param>
             <returns>
-            An appropriate <see cref="!:Apache.Ibatis.Common.Utilities.Resources.IResource"/> handle.
+            An appropriate <see cref="T:MyBatis.Common.Resources.IResource"/> handle.
             </returns>
         </member>
         <member name="T:MyBatis.Common.Resources.ResourceLoaderRegistry">
@@ -3776,11 +3776,11 @@
         <member name="T:MyBatis.Common.Resources.UrlResourceLoader">
             <summary>
             Url resource loader implementation of the
-            <see cref="!:Apache.Ibatis.Common.Utilities.Resources.IResourceLoader"/> interface.
+            <see cref="T:MyBatis.Common.Resources.IResourceLoader"/> interface.
             </summary>
             <remarks>
             <p>
-            This <see cref="!:Apache.Ibatis.Common.Utilities.Resources.IResourceLoader"/> implementation
+            This <see cref="T:MyBatis.Common.Resources.IResourceLoader"/> implementation
             allows the creation of embeded assembly resource.
             </p>
             <remarks>
@@ -3793,7 +3793,7 @@
             <example>
             <p>
             Some examples of the strings that can be used to initialize a new
-            instance of the <see cref="!:Apache.Ibatis.Common.Utilities.Resources.UrlResource"/> class
+            instance of the <see cref="T:MyBatis.Common.Resources.UrlResource"/> class
             include...
             <list type="bullet">
             <item>
@@ -3831,12 +3831,12 @@
         </member>
         <member name="M:MyBatis.Common.Resources.UrlResourceLoader.Create(System.Uri)">
             <summary>
-            Return an <see cref="!:Apache.Ibatis.Common.Utilities.Resources.IResource"/> handle for the
+            Return an <see cref="T:MyBatis.Common.Resources.IResource"/> handle for the
             specified URI.
             </summary>
             <param name="resource">The resource.</param>
             <returns>
-            An appropriate <see cref="!:Apache.Ibatis.Common.Utilities.Resources.IResource"/> handle.
+            An appropriate <see cref="T:MyBatis.Common.Resources.IResource"/> handle.
             </returns>
         </member>
         <member name="T:MyBatis.Common.Utilities.ConfigureHandler">

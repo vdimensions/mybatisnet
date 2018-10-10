@@ -5,7 +5,7 @@
  * $Revision: 591621 $
  * $Date: 2009-06-28 10:11:37 -0600 (Sun, 28 Jun 2009) $
  *
- * iBATIS.NET Data Mapper
+ * MyBatis.NET Data Mapper
  * Copyright (C) 2008/2005 - The Apache Software Foundation
  *
  *
@@ -28,7 +28,7 @@
 namespace MyBatis.DataMapper.Configuration.Interpreters.Config
 {
     ///<summary>
-    /// Constants for nodes and attributes name in iBATIS configuration
+    /// Constants for nodes and attributes name in MyBatis configuration
     /// </summary>
     public static class ConfigConstants
     {
@@ -584,7 +584,7 @@ namespace MyBatis.DataMapper.Configuration.Interpreters.Config
         /// <summary>
         /// Token to identify the empty parameter map.
         /// </summary>
-        public const string EMPTY_PARAMETER_MAP = "iBATIS.Empty.ParameterMap";
+        public const string EMPTY_PARAMETER_MAP = "MyBatis.Empty.ParameterMap";
 
         #endregion Token element
     }

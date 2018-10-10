@@ -5,7 +5,7 @@
  * $Revision: 474141 $
  * $Date: 2008-06-28 09:26:16 -0600 (Sat, 28 Jun 2008) $
  * 
- * iBATIS.NET Data Mapper
+ * MyBatis.NET Data Mapper
  * Copyright (C) 2008/2005 - The Apache Software Foundation
  *  
  * 
@@ -38,7 +38,7 @@ namespace MyBatis.Common.Logging
 	/// a <see cref="NameValueCollection" /> which will contain zero or more user supplied configuration
 	/// properties.
 	/// <para>
-	/// The Apache.Ibatis.Common assembly ships with the following built-in <see cref="ILoggerFactoryAdapter" /> implementations:
+	/// The MyBatis.Common assembly ships with the following built-in <see cref="ILoggerFactoryAdapter" /> implementations:
 	/// </para>
 	///	<list type="table">
 	///	<item><term><see cref="ConsoleOutLoggerFA" /></term><description>Writes output to Console.Out</description></item>

@@ -5,7 +5,7 @@
  * $LastChangedDate: 2009-06-28 10:11:37 -0600 (Sun, 28 Jun 2009) $
  * $LastChangedBy: rgrabowski $
  * 
- * iBATIS.NET Data Mapper
+ * MyBatis.NET Data Mapper
  * Copyright (C) 2008/2005 - The Apache Software Foundation
  *  
  * 
@@ -97,7 +97,7 @@ namespace MyBatis.DataMapper.Configuration
         #region IModelBuilder Members
 
         /// <summary>
-        /// Builds the the iBATIS core model (statement, alias, resultMap, parameterMap, dataSource)
+        /// Builds the the MyBatis core model (statement, alias, resultMap, parameterMap, dataSource)
         /// from an <see cref="IConfigurationStore"/> and store all the refrences in an <see cref="IModelStore"/> .
         /// </summary>
         /// <param name="configurationSetting">The configuration setting.</param>

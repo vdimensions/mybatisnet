@@ -4,7 +4,7 @@
  * $LastChangedDate: 2008-06-28 09:26:16 -0600 (Sat, 28 Jun 2008) $
  * $LastChangedBy: gbayon $
  * 
- * iBATIS.NET Data Mapper
+ * MyBatis.NET Data Mapper
  * Copyright (C) 2008/2005 - The Apache Software Foundation
  *  
  * 
@@ -30,11 +30,11 @@ namespace MyBatis.Common.Resources
 {
     /// <summary>
     /// Url resource loader implementation of the
-    /// <see cref="Apache.Ibatis.Common.Utilities.Resources.IResourceLoader"/> interface.
+    /// <see cref="MyBatis.Common.Resources.IResourceLoader"/> interface.
     /// </summary>
     /// <remarks>
     /// <p>
-    /// This <see cref="Apache.Ibatis.Common.Utilities.Resources.IResourceLoader"/> implementation
+    /// This <see cref="MyBatis.Common.Resources.IResourceLoader"/> implementation
     /// allows the creation of embeded assembly resource.
     /// </p>
     /// <remarks>
@@ -47,7 +47,7 @@ namespace MyBatis.Common.Resources
     /// <example>
     /// <p>
     /// Some examples of the strings that can be used to initialize a new
-    /// instance of the <see cref="Apache.Ibatis.Common.Utilities.Resources.UrlResource"/> class
+    /// instance of the <see cref="MyBatis.Common.Resources.UrlResource"/> class
     /// include...
     /// <list type="bullet">
     /// <item>
@@ -91,12 +91,12 @@ namespace MyBatis.Common.Resources
         }
 
         /// <summary>
-        /// Return an <see cref="Apache.Ibatis.Common.Utilities.Resources.IResource"/> handle for the
+        /// Return an <see cref="MyBatis.Common.Resources.IResource"/> handle for the
         /// specified URI.
         /// </summary>
         /// <param name="resource">The resource.</param>
         /// <returns>
-        /// An appropriate <see cref="Apache.Ibatis.Common.Utilities.Resources.IResource"/> handle.
+        /// An appropriate <see cref="MyBatis.Common.Resources.IResource"/> handle.
         /// </returns>
         public IResource Create(Uri resource)
         {

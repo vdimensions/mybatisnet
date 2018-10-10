@@ -4,7 +4,7 @@
  * $Revision: 378715 $
  * $Date: 2008-09-21 13:25:16 -0600 (Sun, 21 Sep 2008) $
  * 
- * iBATIS.NET Data Mapper
+ * MyBatis.NET Data Mapper
  * Copyright (C) 2008/2005 - Apache Fondation
  *  
  * 
@@ -33,7 +33,7 @@ namespace MyBatis.DataMapper.Session.Stores
 	/// </summary>
 	public abstract class AbstractSessionStore  : MarshalByRefObject, ISessionStore
 	{
-        const string KEY = "_IBATIS_LOCAL_SQLMAP_SESSION_";
+        const string KEY = "_MYBATIS_LOCAL_SQLMAP_SESSION_";
         /// <summary>
         /// session name
         /// </summary>	    

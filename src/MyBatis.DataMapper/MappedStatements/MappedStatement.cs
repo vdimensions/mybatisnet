@@ -5,7 +5,7 @@
  * $LastChangedDate: 2009-06-28 01:03:34 -0600 (Sun, 28 Jun 2009) $
  * $LastChangedBy: rgrabowski $
  * 
- * iBATIS.NET Data Mapper
+ * MyBatis.NET Data Mapper
  * Copyright (C) 2008/2005 - The Apache Software Foundation
  *  
  * 
@@ -45,6 +45,13 @@ using System.Diagnostics;
 using MyBatis.Common.Utilities.Objects;
 
 #endregion
+
+#if !dotnet35
+namespace System
+{
+        public delegate TResult Func<T1, T2, TResult>(T1 arg1, T2 arg2);
+}
+#endif
 
 namespace MyBatis.DataMapper.MappedStatements
 {

@@ -4,7 +4,7 @@
  * $LastChangedDate: 2010-03-10 22:08:07 -0700 (Wed, 10 Mar 2010) $
  * $LastChangedBy: mmccurrey $
  * 
- * iBATIS.NET Data Mapper
+ * MyBatis.NET Data Mapper
  * Copyright (C) 2008/2005 - The Apache Software Foundation
  *  
  * 
@@ -72,7 +72,8 @@ namespace MyBatis.Common.Resources
             string originalResourceName = resourceUri;
 
             Contract.Require.That(resourceUri, Is.Not.Null & Is.Not.Empty).When("retrieving resourceUri argument in CustomUriBuilder constructor");
-            Contract.Require.That(basePath, Is.Not.Null).When("retrieving basePath argument in CustomUriBuilder constructor");
+
+            //Contract.Require.That(basePath, Is.Not.Null).When("retrieving basePath argument in CustomUriBuilder constructor");
 
             // Remove file:// to better analyse later
             if (resourceUri.StartsWith(FileResourceLoader.Scheme + Uri.SchemeDelimiter))
@@ -98,7 +99,7 @@ namespace MyBatis.Common.Resources
                 try
                 {
 
-                    if (!Path.IsPathRooted(resourceUri) || !Resources.FileExists(resourceUri))
+                    if ((!Path.IsPathRooted(resourceUri) || !Resources.FileExists(resourceUri)) && basePath !=null)
                     {
                         resourceUri = Path.Combine(basePath, resourceUri);
                     }
