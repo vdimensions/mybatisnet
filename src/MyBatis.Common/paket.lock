@@ -1,0 +1,2 @@
+STORAGE: NONE
+RESTRICTION: || (== net35) (== net40) (== net46) (== netstandard2.0)
