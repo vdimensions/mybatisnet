@@ -3,14 +3,13 @@
   <PropertyGroup>
     <TargetFrameworks>net46;net35;net40;net35</TargetFrameworks>
   </PropertyGroup>
-  
+
   <Import Project="../../submodules/vdimensions_msbuild_sdk/src/MultitargetingFrameworkSupport.targets" />
   <Import Project="../MyBatis.Shared.props" />
 
   <PropertyGroup>
     <ProjectGuid>{BBC8DA4A-EA88-41D9-8B93-929B8F3ADADE}</ProjectGuid>
     <AssemblyName>MyBatis.Common</AssemblyName>
-    <RootNamespace>MyBatis.Common</RootNamespace>
     <Description>Common object used by DataMapper component in iBATIS.</Description>
     <DocumentationFile>$(AssemblyName).xml</DocumentationFile>
   </PropertyGroup>
