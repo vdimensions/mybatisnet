@@ -11,20 +11,24 @@
     <ProjectGuid>{BBC8DA4A-EA88-41D9-8B93-929B8F3ADADE}</ProjectGuid>
     <AssemblyName>MyBatis.Common</AssemblyName>
     <Description>Common object used by DataMapper component in iBATIS.</Description>
-    <DocumentationFile>$(AssemblyName).xml</DocumentationFile>
+    <DocumentationFile>$(OutputDir)\$(AssemblyName).xml</DocumentationFile>
   </PropertyGroup>
 
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DefineConstants>TRACE;DEBUG;dotnet2</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DefineConstants>TRACE;dotnet2</DefineConstants>
   </PropertyGroup>
 
   <ItemGroup Condition="$(TargetFrameworkIdentifier) == '.NETFramework'">
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
+  
   <ItemGroup>
     <Compile Remove="AssemblyInfo.cs" />
     <Compile Remove="Data/DBHelperParameterCache.cs" />
@@ -37,17 +41,16 @@
     <Compile Remove="Utilities/DBHelperParameterCache.cs" />
     <Compile Remove="Utilities/Resources.cs" />
   </ItemGroup>
+
   <ItemGroup>
     <Folder Include="Migration\" />
   </ItemGroup>
+
   <ItemGroup>
     <Content Include="ChangeLog.txt" />
     <Content Include="licence.txt" />
     <Content Include="notice.txt" />
     <Content Include="provider.xsd" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="MyBatis.Common.build" />
   </ItemGroup>
   <Import Project=".paket\Paket.Restore.targets" />
 </Project>

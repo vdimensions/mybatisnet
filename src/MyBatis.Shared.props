@@ -6,7 +6,7 @@
   <!-- Assembly info properties -->
   <PropertyGroup>
     <AssemblyTitle>$(AssemblyName)</AssemblyTitle>
-    <AssemblyProduct>iBATIS.NET</AssemblyProduct>
+    <AssemblyProduct>MyBatis.NET</AssemblyProduct>
     <AssemblyCompany>$(Authors)</AssemblyCompany>
     <AssemblyCopyright>$(Copyright)</AssemblyCopyright>
     <AssemblyTrademark>Licensed under the Apache License, Version 2.0</AssemblyTrademark>
@@ -26,7 +26,7 @@
     <PackageLicenseUrl>http://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>
     <PackageProjectUrl></PackageProjectUrl>
     <PackageIconUri></PackageIconUri>
-    <PackageTags>MyBatis .NET</PackageTags>
+    <PackageTags>MyBatis.NET mybatisnet</PackageTags>
     <PackageVersion>$(Version)</PackageVersion>
   </PropertyGroup>
 </Project>

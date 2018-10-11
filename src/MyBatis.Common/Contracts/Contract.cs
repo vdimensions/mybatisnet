@@ -1,5 +1,4 @@
-﻿
-#region Apache Notice
+﻿#region Apache Notice
 /*****************************************************************************
  * $Revision: 387044 $
  * $LastChangedDate: 2008-06-28 09:26:16 -0600 (Sat, 28 Jun 2008) $
@@ -25,7 +24,9 @@
 #endregion
 
 using System;
+
 using MyBatis.Common.Contracts.Constraints;
+
 
 namespace MyBatis.Common.Contracts
 {

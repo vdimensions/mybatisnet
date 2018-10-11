@@ -10,14 +10,25 @@
   <PropertyGroup>
     <ProjectGuid>{F3E45F39-3224-4EAD-B138-EB5CC0E32824}</ProjectGuid>
     <AssemblyName>MyBatis.DataMapper</AssemblyName>
-    <DocumentationFile>$(AssemblyName).xml</DocumentationFile>
+    <DocumentationFile>$(OutputDir)\$(AssemblyName).xml</DocumentationFile>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DefineConstants>TRACE;DEBUG;dotnet2</DefineConstants>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <DefineConstants>TRACE;dotnet2</DefineConstants>
   </PropertyGroup>
+
+  <ItemGroup Condition="'$(TargetFrameworkIdentifier)' == '.NETFramework'">
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+
   <ItemGroup>
     <Reference Include="Castle.Core, Version=1.0.3.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -27,14 +38,14 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\External-Bin\Net\2.0\Castle.DynamicProxy2.dll</HintPath>
     </Reference>
-  </ItemGroup>  
-  <ItemGroup Condition="'$(TargetFrameworkIdentifier)' == '.NETFramework'">
-    <Reference Include="System" />
-    <Reference Include="System.Configuration" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MyBatis.Common\MyBatis.Common.csproj">
+      <Project>{BBC8DA4A-EA88-41D9-8B93-929B8F3ADADE}</Project>
+    </ProjectReference>
+  </ItemGroup>
+
   <ItemGroup>
     <Compile Remove="AssemblyInfo.cs" />
     <Compile Remove="Configuration/Alias/*.cs" />
@@ -54,12 +65,14 @@
     <Compile Remove="Session/SessionStoreFactory.cs" />
     <Compile Remove="SessionStore/*.cs" />
   </ItemGroup>
+
   <ItemGroup>
     <Content Include="ChangeLog.txt" />
     <Content Include="licence.txt" />
     <Content Include="notice.txt" />
     <Content Include="ReadMe.txt" />
   </ItemGroup>
+
   <ItemGroup>
     <None Include="Apache.Ibatis.DataMapperr.build" />
     <None Include="Configuration\Module\ModuleDiagram.cd" />
@@ -67,21 +80,12 @@
     <None Include="MappedStatements\ResultStrategy\ClassDiagram.cd" />
     <None Include="Model\Events\Events.cd" />
   </ItemGroup>
+
   <ItemGroup>
-    <EmbeddedResource Include="SqlMap.xsd">
-      <SubType>
-      </SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SqlMapConfig.xsd">
-      <SubType>
-      </SubType>
-    </EmbeddedResource>
+    <EmbeddedResource Include="SqlMap.xsd" />
+    <EmbeddedResource Include="SqlMapConfig.xsd" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\MyBatis.Common\MyBatis.Common.csproj">
-      <Project>{BBC8DA4A-EA88-41D9-8B93-929B8F3ADADE}</Project>
-    </ProjectReference>
-  </ItemGroup>
+  
   <ItemGroup>
     <Folder Include="Configuration\Interpreters\Mapping\" />
   </ItemGroup>
